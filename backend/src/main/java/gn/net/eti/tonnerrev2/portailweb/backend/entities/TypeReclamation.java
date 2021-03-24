@@ -1,26 +1,25 @@
 package gn.net.eti.tonnerrev2.portailweb.backend.entities;
 
-import com.fasterxml.jackson.annotation.JsonSetter;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * @création 18/03/2021
+ * @création 24/03/2021
  * @projet portailweb
  * @auteur mohamed.bangoura
  * @package gn.net.eti.tonnerrev2.portailweb.backend.entities
  */
-
-@Entity
+@Entity(name = "tc_type_reclamation")
 @Data
-public class Formulaire {
+@AllArgsConstructor
+@NoArgsConstructor
+public class TypeReclamation {
     @Id
-    @GeneratedValue
-    private Long id;
-
+    private Long idTypeReclamation;
+    private String libelleTypeReclamation;
 
 }
